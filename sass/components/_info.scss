@@ -1,0 +1,104 @@
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    @include media('>lg', '<=xl') {
+       margin-top: 6.25vw;        
+    }
+    @include media('<=lg') {
+        flex-wrap: wrap; 
+        margin-top: 60px;      
+    }
+    &__item {
+        max-width: 33.333333%;
+        flex: 0 0 33.333333%;
+        border-left: 1px solid #eaeaea;
+        @include media('<=lg') {
+            max-width: 100%;
+            flex: 0 0 100%;  
+            border: none;     
+            margin-top: 56px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        .info__tit, .info__desc, .info__img {
+            transform: translateY(40px);
+            opacity: 0;
+            transition: transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity .8s;
+        }
+        &:nth-child(2) {
+            .info__tit, .info__desc, .info__img {
+                transform: translateY(70px);
+            }
+        }
+        &:nth-child(3) {
+            .info__tit, .info__desc, .info__img {
+                transform: translateY(100px);
+            }
+        }
+        @include media('<=lg') {
+            .info__tit, .info__desc, .info__img {
+                transform: translateY(50px);
+            }        
+        }
+        &.active {
+            .info__tit, .info__desc, .info__img {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        &:first-child {
+            border: none;
+        }
+    }
+    &__img {
+        width: 120px;
+        height: 120px;
+        @include media('>lg', '<=xl') {
+           width: 7.5vw;
+           height: 7.5vw;        
+        }
+        @include media('<=lg') {
+            width: 100px;
+            height: 100px;       
+        }
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    &__tit {
+        margin-top: 53px;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 40px;
+        color: #121212;
+        @include media('>lg', '<=xl') {
+            margin-top: 3.3125vw;
+            font-size: 1.5vw;
+            line-height: 2.5vw;
+        }
+        @include media('<=lg') {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 20px;    
+            line-height: 30px;   
+        }
+    }
+    &__desc {
+        font-size: 16px;
+        line-height: 26px;
+        color: #121212;
+        @include media('>lg', '<=xl') {
+            font-size: 1vw;
+            line-height: 1.625vw;       
+        }
+        @include media('<=lg') {
+            font-size: 14px;
+            line-height: 15px;       
+        }
+    }
+}

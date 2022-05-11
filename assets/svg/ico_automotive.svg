@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <clipPath id="gifiwajzya">
+            <path data-name="사각형 454" style="fill:#121212" d="M0 0h64v64H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 334" style="clip-path:url(#gifiwajzya)">
+        <path data-name="패스 12683" d="m14.143 23.666-2.356-1.856 8.656-10.991h23.033l8.656 10.991-2.357 1.856-7.755-9.847H21.9z" style="fill:#121212"/>
+        <path data-name="패스 12684" d="M57.722 52.875h-8.913L42.4 41.454H21.522l-6.411 11.421H6.2l-2.838-19.3 3.228-4.418 2.422 1.771-2.506 3.427 2.282 15.52h4.567l6.411-11.421h24.387l6.412 11.421h4.566l2.282-15.52-2.506-3.427 2.422-1.771 3.231 4.419z" style="fill:#121212"/>
+        <path data-name="사각형 452" transform="translate(16.389 46.034)" style="fill:#121212" d="M0 0h31.033v3H0z"/>
+        <g data-name="그룹 333">
+            <g data-name="그룹 332" style="clip-path:url(#gifiwajzya)">
+                <path data-name="패스 12685" d="m59.592 23.569-5.031-.008-8.731 7.15H18.089l-8.732-7.15-5.024.008-3.008 3.008c.041 0 5.587-.009 6.964-.013l8.729 7.147H46.9l8.728-7.147c1.382 0 5.966.008 5.966.008z" style="fill:#121212"/>
+            </g>
+        </g>
+    </g>
+</svg>

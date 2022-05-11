@@ -1,0 +1,83 @@
+.ico {
+    width: 24px;
+    height: 24px;
+    @include media('>lg','<=xl') {
+        width: 1.5vw;
+        height: 1.5vw;       
+    }
+    &--search {
+        background-position: -100px -56px;
+        @include media('>lg','<=xl') {
+            background-position: -6.25vw -3.5vw;
+        }
+        @include media('<=lg') {
+            background-position: -44px -45px;
+        }
+    }
+    &--language {
+        background-position: -126px -108px;
+        @include media('>lg','<=xl') {
+            background-position: -7.875vw -6.75vw;
+        }
+        @include media('<=lg') {
+            display: none;       
+        }
+    }
+    &--close {
+        position: absolute;
+        top: 33px;
+        right: 33px;
+        background-position: -68px -140px;
+        @include media('>lg') {
+            display: none;
+        }
+    }
+    &-more {
+        display: block;
+        margin-top: 9px;
+        width: 56px;
+        height: 56px;
+        background-position:0 -56px;
+        transform: translateY(30px);
+        transition: transform .3s cubic-bezier(0.645, 0.045, 0.355, 1), opacity .3s;
+        opacity: 0;
+        @include media('>lg','<=xl') {
+            width: 3.5vw;
+            height: 3.5vw;
+            background-position: 0 -3.5vw;
+            margin-top: 0.5625vw;
+        }
+        @include media('<=lg') {
+            margin-top: 10px;
+            width: 42px;
+            height: 42px;
+            background-position: 0 -44px;  
+        }
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+            &:hover {
+                @include media('>lg') {
+                    transform: translate(10px);       
+                }
+            }
+        }
+    }
+}
+.header.header--active, .header.header--se, .header.header--lang {
+    .ico.ico--search {
+        background-position: -100px -82px;
+        @include media('>lg','<=xl') {
+            background-position: -6.25vw -5.125vw;
+        }
+        @include media('<=lg') {
+            background-position: -70px -45px;       
+        }
+    }
+    .ico.ico--language {
+        background-position: -100px -108px;
+        @include media('>lg','<=xl') {
+            background-position: -6.25vw -6.75vw;
+        }
+    }
+}

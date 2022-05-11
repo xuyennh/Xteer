@@ -1,0 +1,59 @@
+.language {
+    display: flex;
+    margin-left: 34px;
+    &.mo {
+        display: none;
+    }
+    @include media('<=xl') {
+        margin-left: 2.125vw;
+    }
+    &__list {
+        position: absolute;
+        top: 100%;
+        padding: 26px 38px 25px;
+        background-color: #121212;
+        width: 100px;
+        left: 68px;
+        box-sizing: border-box;
+        opacity: 0;
+        visibility: hidden;
+        box-sizing: border-box;
+        z-index: 11;
+        @include media('<=lg') {
+            display: none;
+        }
+        &--active {
+            opacity: 1;
+            visibility: visible;
+        }
+        @include media('>lg', '<=xl') {
+            padding: 1.625vw 2.375vw 1.5625vw;
+            width: 6.25vw;
+            left: 4.25vw;
+        }
+       
+    }
+    &__item {
+        margin-top: 16px;
+        &:first-child {
+            margin-top: 0;
+        }
+        &--active {
+            .language__link {
+                color: #fff;
+            }
+        }
+        @include media('>lg', '<=xl') {
+            margin-top: 1vw;       
+        }
+    }
+    &__link {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #999;
+        @include media('>lg','<=xl') {
+            font-size: 1vw;       
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.wrap {
+    max-width: 2560px;
+    min-width: 360px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+img {
+    max-width: 100%;
+	height: auto;
+	border: 0;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+	margin: 0 auto;
+    box-sizing: border-box;
+    z-index: 1;
+    @include media('>lg', '<=xl') {
+        max-width: 87.5vw;    
+    }
+}
+.sp_pc {
+    background: url('../../assets/img/sp_pc.png') no-repeat top left;
+    background-size: 192px 174px;
+    @include media('>lg','<=xl') {
+        background-size: 12vw 10.875vw;
+    }
+}
+@include media('<=lg') {
+    .sp_mo {
+        background: url('../../assets/img/sp_mo.png') no-repeat top left;
+        background-size: 137px 182px;
+    }       
+}
+.scroll-to-top {
+    position: absolute;
+    height: 64px;
+    width: 64px;
+    bottom: calc(100% + 40px);
+    right: 40px;
+    background-position: -126px 0;
+    @include media('>lg', '<=xl') {
+       width: 4vw;
+       height: 4vw;     
+       right: 2.5vw;  
+       bottom: calc(100% + 2.5vw);
+       background-position: -7.875vw 0;
+    }
+    @include media('<=lg') {
+        display: none;       
+    }
+}
+.mo {
+    @include media('<=lg') {
+        display: block;       
+    }
+}
+.pc {
+    display: none;
+    @include media('>lg') {
+        display: block;
+    }
+}
+.dimmed {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .4;
+    background-color: #000;
+    z-index: 9;
+    &--active {
+        display: block;
+    }
+}

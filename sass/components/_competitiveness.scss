@@ -1,0 +1,192 @@
+.competitiveness {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -8px;
+    margin-top: 81px;
+    @include media('>lg', '<=xl') {
+        margin: 0 -0.5vw;
+        margin-top: 5.0625vw;       
+    }
+    @include media('<=lg') {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        margin-top: 40px;      
+    }
+    &__item {
+        max-width: 33.333333%;
+        flex: 0 0 33.333333%;
+        padding: 0 8px;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: transform 1s, opacity 1s;
+        box-sizing: border-box;
+        &:nth-child(2) {
+            transform: translateY(150px);
+        }
+        &:nth-child(3) {
+            transform: translateY(200px);
+        }
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        @include media('>lg', '<=xl') {
+            padding: 0 0.5vw;       
+        }
+        @include media('<=lg') {
+            max-width: 100%;
+            flex: 0 0 100%;
+            margin-top: 20px;  
+            padding: 0;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    &__link {
+        position: relative;
+        display: block;
+        height: 600px;
+        @include media('>lg') {
+            &:hover {
+                .competitiveness__name {
+                    display: none;
+                }
+                .competitiveness__cont {
+                    opacity: 0.7;
+                }
+                .competitiveness__title, .competitiveness__desc, .competitiveness__desc::after {
+                    transform: translateY(0);
+                }
+                
+            }       
+        }
+        @include media('>lg', '<=xl') {
+            height: 37.5vw;  
+        }
+        @include media('<=lg') {
+            width: 324px;
+            height: 320px;       
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        &.mo {
+            display: none;
+        }
+        @include media('<=lg') {
+            display: none;    
+            &.mo {
+                display: block;
+            }   
+        }
+    }
+    &__name {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: left;
+        color: #fff;
+        z-index: 2;
+        @include media('>lg', '<=xl') {
+            top: 2.5vw;
+            left: 2.5vw;
+            font-size: 1.5vw;
+        }
+        @include media('<=lg') {
+            display: none;       
+        }
+    }
+    &__cont {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: 188px 40px;
+        width: 100%;
+        opacity: 0;
+        background-color: #0313a5;
+        transition: opacity .4s;
+        box-sizing: border-box;
+        @include media('>lg', '<=xl') {
+           padding: 11.75vw 2.5vw;        
+        }
+        @include media('<=lg') {
+            opacity: 1;
+            background-color: transparent;
+            padding: 15px 0 15px;    
+        }
+        .competitiveness__title {
+            position: static;
+            font-weight: 700;
+            font-size: 32px;
+            color: #fff;
+            text-align: center;
+            transform: translateY(30px);
+            transition: transform .2s;
+            @include media('>lg', '<=xl') {
+               font-size: 2vw;
+               line-height: 3.25vw;       
+            }
+            @include media('<=lg') {
+                font-size: 24px;   
+                transform: translateY(0);
+            }
+        }
+        .competitiveness__desc {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #fff;
+            line-height: 32px;
+            text-align: center;
+            transform: translateY(30px);
+            transition: transform .2s;
+            &::after {
+                content: "";
+                display: block;
+                margin: 32px auto 0;
+                width: 24px;
+                height: 24px;
+                background: url('../../assets/img/sp_pc.png') no-repeat top left;
+                background-position: -168px -80px;
+                background-size: 192px 174px;
+                transform: translateY(30px);
+                transition: transform .2s;
+                @include media('>lg', '<=xl') {
+                    background-position: -10.5vw -5vw;
+                    background-size: 12vw 10.875vw;
+                }
+                @include media('<=lg') {
+                    background: url('../../assets/img/sp_mo.png') no-repeat top left;
+                    background-size: 137px 182px;
+                    background-position: -44px -70px;
+                    margin-top: 25px;  
+                    transform: translateY(0);
+                }
+            }
+            @include media('>lg', '<=xl') {
+                margin-top: 1.875vw;
+                font-size: 1.125vw;  
+                padding: 0 1.25vw;
+                line-height: 2vw;
+            }
+            @include media('<=lg') {
+                font-size: 14px;       
+                line-height: 26px;
+                margin-top: 30px;
+                transform: translateY(0);
+            }
+        }
+    }
+}

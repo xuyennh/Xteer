@@ -1,0 +1,245 @@
+.lineup {
+    position: relative;
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+    @include media('>lg', '<=xl') {
+        margin-top: 3.75vw;    
+    }
+    @include media('<=lg') {
+        flex-flow: column-reverse;
+        align-items: center;
+    }
+    &-title {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 20px;
+        text-align: left;
+        color: #121212;
+        transform: translateY(40px);
+        opacity: 0;
+        transition: transform .6s cubic-bezier(0.215, 0.610, 0.355, 1), opacity .6s;
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        @include media('>lg', '<=xl') {
+            font-size: 1.25vw;
+            margin-top: 1.25vw; 
+        }
+        @include media('<=lg') {
+            margin-top: 10px;       
+        }
+    }
+    &-desc {
+        margin-top: 20px;
+        font-size: 16px;
+        text-align: left;
+        color: #121212;
+        line-height: 26px;
+        transform: translateY(40px);
+        opacity: 0;
+        transition: transform .8s cubic-bezier(0.215, 0.610, 0.355, 1), opacity .8s;
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        @include media('>lg', '<=xl') {
+            font-size: 1vw;
+            margin-top: 1.25vw;
+            line-height: 1.625vw;   
+        }
+        @include media('<=lg') {
+            margin-top: 7px;
+            font-size: 14px;   
+            line-height: 24px;    
+        }
+    }
+    &-pagination {
+        margin-top: 50px;
+        @include media('>lg', '<=xl') {
+            margin-top: 3.125vw;
+        }
+    }
+    &-wrap {
+        padding-bottom: 55px;
+        @include media('>lg', '<=xl') {
+            padding-bottom: 3.4375vw;    
+        }
+        @include media('<=lg') {
+            padding-bottom: 86px;       
+        }
+    }
+    &-img {
+        transform: translateX(30%);
+        opacity: 0;
+        transition: transform 1s, opacity 1s;
+        @include media('<=lg') {
+            transform: translateX(100%);    
+            transition: transform 1s, opacity 1s;
+        }
+        &.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    .swiper-counter {
+        position: absolute;
+        bottom: 0;
+        left: 34px;
+        font-size: 20px;
+        color: #121212;
+        font-weight: 700;
+        @include media('>lg', '<=xl') {
+            left: 2.125vw;  
+            font-size: 1.25vw;  
+        }
+        @include media('<=lg') {
+            font-size: 16px;       
+        }
+        .current {
+            &::after {
+                display: inline-block;
+                margin-left: 11px;
+                margin-right: 8px;
+                width: 10px;
+                height: 24px;
+                vertical-align: middle;
+                background: url('../../assets/img/sp_pc.png') no-repeat top left;
+                background-position: -42px -114px;
+                background-size: 192px 174px;
+                content: "";
+                @include media('>lg', '<=xl') {
+                    width: 0.625vw;
+                    height: 1.5vw;
+                    margin-right: 0.5vw;
+                    margin-left: 0.6875vw;
+                    background-position: -2.625vw -7.125vw;
+                    background-size: 12vw 10.875vw;
+                }
+                @include media('<=lg') {
+                    background: url('../../assets/img/sp_mo.png') no-repeat top left;
+                    background-size: 137px 182px;
+                    background-position: -101px -84px;       
+                }
+            }
+        }
+        .current, .total {
+            &.disable {
+                opacity: 0.2;
+            }
+        }
+    }
+    .swiper-button-prev, .swiper-button-next {
+        top: auto;
+        bottom: 2px;
+        width: 24px;
+        height: 24px;
+        @include media('>lg', '<=xl') {
+            width: 1.5vw;
+            height: 1.5vw;       
+            bottom: 0.125vw;
+        }
+    }
+    .swiper-button-next {
+        background-position: -152px -108px;
+        left: 123px;
+        @include media('>lg', '<=xl') {
+           background-position: -9.5vw -6.75vw;
+           left: 7.6875vw;        
+        }
+        @include media('<=lg') {
+            background-position: -70px -70px;
+            left: 114px;    
+        }
+    }
+    .swiper-button-prev {
+        background-position: -42px -140px;
+        left: 0;
+        @include media('>lg', '<=xl') {
+            background-position: -2.625vw -8.75vw;     
+        }
+        @include media('<=lg') {
+            background-position: -113px -84px;     
+            left: -2px;  
+        }
+    }
+
+}
+.lineup-ic-lst {
+    display: flex;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.215, 0.610, 0.355, 1), opacity .4s;
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    &__item {
+        margin-left: 16px;
+        width: 40px;
+        height: 40px;
+        &:first-child {
+            margin-left: 0;
+        }
+        @include media('>lg', '<=xl') {
+             width: 2.5vw;
+             height: 2.5vw;      
+        }
+    }
+    &--moto {
+        background-position: -100px -134px;
+        @include media('>lg', '<=xl') {
+            background-position: -6.25vw -8.375vw;  
+        }
+        @include media('<=lg') {
+            background-position: -97px 0;    
+        }
+    }
+    &--pr {
+        background-position: -142px -134px;
+        @include media('>lg', '<=xl') {
+            background-position: -8.875vw -8.375vw;       
+        }
+        @include media('<=lg') {
+            background-position: -97px -42px;    
+        }
+    }
+}
+.lineup-thumbs{
+    max-width: 50%;
+    flex: 0 0 50%;
+    overflow: hidden;
+    padding-bottom: 70px;
+    @include media('>lg', '<=xl') {
+        padding-bottom: 4.375vw;  
+    }
+    @include media('<=lg') {
+        margin-top: 68px;
+        margin-left: 6px;
+        max-width: 100%;
+        flex: 0 0 100%;       
+        padding-bottom: 0;
+    }
+}
+.lineup-full {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: -3.125vw;
+    width: 540px;
+    height: 540px;
+    @include media('>lg', '<=xl') {
+        width: 33.75vw;
+        height: 33.75vw;
+    }
+    @include media('<=lg') {
+        position: static;
+        max-width: 100%;
+        flex: 0 0 100%;   
+        width: 280px;
+        height: 280px;
+        margin-top: 50px;
+    }
+}

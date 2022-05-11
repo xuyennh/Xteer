@@ -1,0 +1,100 @@
+.footer {
+    position: relative;
+    padding: 58px 260px 57px;
+    background-color: #000;
+    @include media('>lg', '<=xl') {
+        padding: 3.625vw 16.25vw 3.5625vw;       
+    }
+    @include media('<=lg') {
+        padding: 60px 38px 94px 18px;       
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        @include media('<=lg') {
+            flex-flow: column-reverse;       
+        }
+    }
+    &__left {
+        @include media('<=lg') {
+            margin-top: 20px;     
+        }
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__contact {
+        display: flex;
+        @include media('<=lg') {
+            flex-direction: column;       
+        }
+    }
+    &__item {
+        font-size: 16px;
+        text-align: left;
+        color: #666;
+        line-height: 24px;
+        margin-top: 7px;
+        &:first-child {
+            margin-left: 0;
+            &::after {
+                content: "";
+                width: 1px;
+                display: inline-block;
+                margin: 0 7px;
+                height: 13px;
+                background-color:#444; 
+                @include media('>lg', '<=xl') {
+                   margin: 0 0.4375vw;   
+                   height: 0.8125vw;     
+                }
+                @include media('<=lg') {
+                    display: none;       
+                }
+            }
+        }
+        @include media('>lg', '<=xl') {
+           font-size: 1vw;
+           line-height: 1.5vw; 
+           margin-top: 0.4375vw;    
+        }
+        @include media('<=lg') {
+            font-size: 12px;
+            line-height: normal;
+            margin-top: 0;
+        }
+    }
+    &__txt {
+        font-size: 16px;
+        text-align: left;
+        color: #666;
+        line-height: 26px;
+        @include media('>lg', '<=xl') {
+            font-size: 1vw;
+            line-height: 1.625vw;  
+        }
+        @include media('<=lg') {
+            font-size: 12px;     
+        }
+    }
+    &__copyright {
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 37px;
+        color: #888;
+        text-align: left;
+        line-height: 24px;
+        white-space: nowrap;
+        @include media('>lg', '<=xl') {
+            font-size: 1vw;
+            margin-top: 2.3125vw;
+            line-height: 1.5vw;
+        }
+        @include media('<=lg') {
+            margin-top: 34px;     
+            font-size: 12px; 
+        }
+    }
+}

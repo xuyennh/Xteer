@@ -1,0 +1,146 @@
+.search {
+    position: absolute;
+    padding-top: 90px;
+    padding-bottom: 115px;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;
+    z-index: 10;
+    overflow-y: auto;
+    max-height: 100vh;
+    box-sizing: border-box;
+    &__title {
+        font-family: 'NotoSans';
+        font-size: 48px;
+        font-weight: 700;
+        text-align: center;
+        color: #121212;
+        @include media('>lg', '<=xl') {
+            font-size: 3vw;     
+        }
+        @include media('<=lg') {
+            font-size: 30px;       
+        }
+    }
+    @include media('>lg', '<=xl') {
+        padding-top: 5.625vw;
+        padding-bottom: 7.1875vw;
+    }
+    @include media('<=lg') {
+        top: 0;
+        padding-left: 18px;
+        padding-right: 18px;       
+    }
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.form-search {
+    width: 928px;
+    margin: 30px auto 0;
+    &__group {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 4px solid #000;
+        @include media('<=lg') {
+            border-bottom: 3px solid #000;       
+        }
+    }
+    @include media('>lg', '<=xl') {
+        width: 58vw;
+        margin: 2.5625vw auto 0;
+    }
+    @include media('<=lg') {
+        width: 100%;       
+    }
+}
+.search-input {
+    width: 100%;
+    font-family: 'NotoSans';
+    font-size: 20px;
+    text-align: left;
+    border: none;
+    padding: 22px 0;
+    &:focus {
+        outline: none;
+    }
+    @include media('>lg', '<=xl') {
+        font-size: 1.25vw;       
+    }
+    @include media('<=lg') {
+        padding: 12px 0; 
+        font-size: 14px;      
+    }
+}
+.search-result {
+    margin-top: 26px;
+    @include media('>lg', '<=xl') {
+        margin-top: 1.625vw;    
+    }
+    @include media('<=lg') {
+        margin-top: 10px;  
+        margin-left: -4px;     
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #555;
+        @include media('>lg', '<=xl') {
+            font-size: 1vw;       
+        }
+        @include media('<=lg') {
+            display: none;       
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin-left: 34px;
+        @include media('<=lg') {
+            margin-left: 0;   
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+    }
+    &__item {
+        margin-left: 35px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #999;
+        text-align: left;
+        @include media('>lg') {
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        @include media('<=lg') {
+            border-radius: 15.5px;
+            border: solid 1px #e8e8e8; 
+            padding: 8px 12px;
+            margin-left: 4px;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+    }
+    &--active {
+        font-weight: bold;
+    }
+    @include media('>lg', '<=xl') {
+        margin-top: 0.8125vw;
+        &__item {
+            margin-left: 2.1875vw;
+            font-size: 0.875vw;
+        }
+    }
+}

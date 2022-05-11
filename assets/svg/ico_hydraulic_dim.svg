@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <clipPath id="oz1q4eu3ca">
+            <path data-name="사각형 462" style="fill:#d1d1d1" d="M0 0h64v64H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 340" style="clip-path:url(#oz1q4eu3ca)">
+        <g data-name="그룹 339">
+            <g data-name="그룹 338" style="clip-path:url(#oz1q4eu3ca)">
+                <path data-name="패스 12686" d="M13.44 23.68a9.6 9.6 0 1 1 9.6-9.6 9.611 9.611 0 0 1-9.6 9.6m0-16.2a6.6 6.6 0 1 0 6.6 6.6 6.608 6.608 0 0 0-6.6-6.6" style="fill:#d1d1d1"/>
+                <path data-name="패스 12687" d="M52.48 20.48a7.04 7.04 0 1 1 7.04-7.04 7.048 7.048 0 0 1-7.04 7.04m0-11.08a4.04 4.04 0 1 0 4.04 4.04 4.044 4.044 0 0 0-4.04-4.04" style="fill:#d1d1d1"/>
+                <path data-name="패스 12688" d="M29.111 20.04H20.52v-3h7.911l2.669-1.273h17.754v3H31.775z" style="fill:#d1d1d1"/>
+                <path data-name="패스 12689" d="M49.168 10.443H31.1L28.432 9.17h-9.915v-3h10.595l2.666 1.273h17.39z" style="fill:#d1d1d1"/>
+                <path data-name="사각형 457" transform="rotate(-10.66 113.715 -24.993)" style="fill:#d1d1d1" d="M0 0h3v30.504H0z"/>
+                <path data-name="패스 12690" d="M60.3 36.04h-15v-10h15zm-12-3h9v-4h-9z" style="fill:#d1d1d1"/>
+                <path data-name="사각형 458" transform="translate(51.3 40.506)" style="fill:#d1d1d1" d="M0 0h3v4.71H0z"/>
+                <path data-name="사각형 459" transform="translate(47.749 22.355)" style="fill:#d1d1d1" d="M0 0h3v4.439H0z"/>
+                <path data-name="사각형 460" transform="translate(54.789 22.355)" style="fill:#d1d1d1" d="M0 0h3v4.961H0z"/>
+                <path data-name="패스 12691" d="M31.884 60.22H3.84v-11h32v7.044zm-25.044-3h23.8l2.2-2.2v-2.8h-26z" style="fill:#d1d1d1"/>
+                <path data-name="패스 12692" d="m26.485 45.917-5.053-26-2.945.572 4.941 25.431z" style="fill:#d1d1d1"/>
+                <path data-name="패스 12693" d="m52.8 42.143-5-1.882V33.04h10v7.221zm-2-3.958 2 .753 2-.753V36.04h-4z" style="fill:#d1d1d1"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,52 @@
+.quick-link {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include media('<=lg') {
+        flex-wrap: wrap;       
+    }
+    &__item {
+        max-width: 50%;
+        flex: 0 0 50%;
+        &:first-child {
+            border: none;
+        }
+        @include media('<=lg') {
+            max-width: 100%;
+            flex: 0 0 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;  
+            &:first-child {
+                position: relative;
+                &:after {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: 100%;
+                    height: 1px;
+                    background-color: #fff;
+                    opacity: 0.2;
+                    content: "";
+                }
+            }
+        }
+    }
+    &__link {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 52px;
+        color: #fff;
+        @include media('>lg', '<=xl') {
+            font-size: 1.5vw;   
+            line-height: 3.25vw;   
+        }
+        @include media('<=lg') {
+            font-size: 18px;
+            line-height: 30px;       
+        }
+    }
+}

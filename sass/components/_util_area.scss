@@ -1,0 +1,14 @@
+.util-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 38px 42px;
+    box-sizing: border-box;
+    @include media('<=xl') {
+        padding: 2.375vw 2.625vw;
+    }
+    @include media('<=lg') {
+        padding: 22px 18px 18px;       
+    }
+}

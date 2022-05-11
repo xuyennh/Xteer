@@ -1,0 +1,104 @@
+.search-wrap {
+    width: 100%;
+    margin-top: 60px;
+    @include media('>lg', '<=xl') {
+        margin-top: 3.75vw;    
+    }
+    @include media('<=lg') {
+        margin-top: 142px;       
+    }
+}
+.search-form {
+    width: 100%;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: transform .5s, opacity .5s;
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    &__group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 10px 30px;
+        box-sizing: border-box;
+        @include media('>lg', '<=xl') {
+            padding: 0.625vw 1.875vw;
+        }
+        @include media('<=lg') {
+            padding: 15px;      
+            height: 48px; 
+        }
+    }
+    &__input {
+        width: 100%;
+        font-family: 'NotoSans';
+        font-size: 20px;
+        line-height: 60px;
+        text-align: left;
+        border: none;
+        box-sizing: border-box;
+        &:focus {   
+            outline: none;
+        }
+        @include media('>lg', '<=xl') {
+            font-size: 1.25vw; 
+            line-height: 3.75vw;    
+        }
+        @include media('<=lg') {
+            font-size: 14px;
+            line-height: 19px;       
+        }
+    }
+}
+.search-form-result {
+    margin-top: 30px;
+    @include media('>lg', '<=xl') {
+        margin-top: 1.875vw;
+    }
+    @include media('<=lg') {
+        margin-top: 10px;      
+        margin-left: -4px; 
+    }
+    &__list {
+        display: flex;
+        @include media('<=lg') {
+            flex-wrap: wrap;       
+        }
+    }
+    &__item {
+        padding: 14px 20px;
+        background-color: #000;
+        border-radius: 23px;
+        color: #fff;
+        font-size: 14px;
+        margin-left: 10px;
+        transform: translateY(50px);
+        opacity: 0;
+        transition: transform .6s, opacity .6s;
+        box-sizing: border-box;
+        @include media('>lg', '<=xl') {
+            padding: 0.875vw 1.25vw;    
+            border-radius: 1.4375vw;
+            font-size: 0.875vw;
+            margin-left: 0.625vw;
+        }
+        @include media('>lg') {
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        @include media('<=lg') {
+            margin-left: 4px;
+            font-size: 12px;    
+            margin-top: 8px;
+            padding: 8px 12px; 
+        }
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}

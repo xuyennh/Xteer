@@ -1,0 +1,63 @@
+.social {
+    display: flex;
+    justify-content: flex-end;
+    @include media('<=lg') {
+        justify-content: flex-start;       
+    }
+    &__item {
+        margin-left: 20px;
+        &:first-child {
+            margin-left: 0;
+        }
+        @include media('>lg', '<=xl') {
+           margin-left: 1.25vw;        
+        }
+    }
+    &__link {
+        display: block;
+        width: 40px;
+        height: 40px;
+        @include media('>lg', '<=xl') {
+           width: 2.5vw;
+           height: 2.5vw;        
+        }
+        &:hover {
+            &.social--fb {
+                background-position: -58px -98px;
+                @include media('>lg', '<=xl') {
+                    background-position: -3.625vw -6.125vw;       
+                }
+                @include media('<=lg') {
+                    background-position: 0 -100px;       
+                }
+            }
+            &.social--insta {
+                background-position: 0 -114px;
+                @include media('>lg', '<=xl') {
+                    background-position: 0 -7.125vw;       
+                }
+                @include media('<=lg') {
+                    background-position: 0 -142px;       
+                }
+            }
+        }
+    }
+    &--fb {
+        background-position: -58px -56px;
+        @include media('>lg', '<=xl') {
+            background-position: -3.625vw -3.5vw;         
+        }
+        @include media('<=lg') {
+            background-position: -42px -100px;      
+        }
+    }
+    &--insta {
+        background-position: -126px -66px;
+        @include media('>lg', '<=xl') {
+            background-position: -7.8825vw -4.125vw;
+        }
+        @include media('<=lg') {
+            background-position: -42px -142px;      
+        }
+    }
+}

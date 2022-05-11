@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <clipPath id="a5zpvbtbva">
+            <path data-name="사각형 468" style="fill:#d1d1d1" d="M0 0h64v64H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 346" style="clip-path:url(#a5zpvbtbva)">
+        <path data-name="패스 12694" d="M61.2 59.936h-3V6.181h-8.434v53.754h-3V3.181H61.2z" style="fill:#d1d1d1"/>
+        <path data-name="사각형 466" transform="translate(48.599 16.339)" style="fill:#d1d1d1" d="M0 0h10.907v3H0z"/>
+        <path data-name="사각형 467" transform="translate(48.599 23.379)" style="fill:#d1d1d1" d="M0 0h10.907v3H0z"/>
+        <path data-name="패스 12695" d="M14.618 30.617v.106l-3 .893v5.4h3v-6.4z" style="fill:#d1d1d1"/>
+        <path data-name="패스 12696" d="M20.58 31.62v5.4h3v-6.294z" style="fill:#d1d1d1"/>
+        <path data-name="패스 12697" d="M29.54 31.626v5.391h3v-6.285z" style="fill:#d1d1d1"/>
+        <path data-name="패스 12698" d="M38.5 31.625v5.392h3v-6.286z" style="fill:#d1d1d1"/>
+        <path data-name="패스 12699" d="M14.618 42.78v.106l-3 .893v5.4h3v-6.4z" style="fill:#d1d1d1"/>
+        <path data-name="패스 12700" d="M20.58 43.783v5.4h3v-6.294z" style="fill:#d1d1d1"/>
+        <path data-name="패스 12701" d="M29.54 43.789v5.391h3v-6.285z" style="fill:#d1d1d1"/>
+        <path data-name="패스 12702" d="M38.5 43.788v5.392h3v-6.285z" style="fill:#d1d1d1"/>
+        <path data-name="패스 12703" d="M42.223 57.512v-.019H5.74V27.5L48.7 14.7l-.856-2.875L2.74 25.266v35.227h36.5z" style="fill:#d1d1d1"/>
+    </g>
+</svg>

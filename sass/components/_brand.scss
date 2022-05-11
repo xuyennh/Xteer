@@ -1,0 +1,50 @@
+.brand {
+    &__tit {
+        font-size: 48px;
+        font-weight: 700;
+        color: #121212;
+        text-align: center;
+        line-height: 68px;
+        opacity: 0;
+        transform: translateY(70px);
+        transition: transform 1s, opacity .4s;
+        @include media('>lg', '<=xl') {
+            font-size: 3vw;
+            line-height: 4.25vw;
+        }
+        @include media('<=lg') {
+            font-size: 30px;
+            line-height: 42px;       
+        }
+        &.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    &__txt {
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center; 
+        color: #121212;
+        margin-top: 50px;
+        line-height: 32px;
+        opacity: 0;
+        transform: translateY(90px);
+        transition:transform 1s, opacity .4s;
+        @include media('>lg', '<=xl') {
+            font-size: 1.125vw;
+            margin-top: 3.125vw;
+            line-height: 2vw;
+        }
+        @include media('<=lg') {
+            font-size: 16px; 
+            line-height: 26px;  
+            font-weight: normal;   
+            margin-top: 30px;
+        }
+        &.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

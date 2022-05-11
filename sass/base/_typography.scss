@@ -1,0 +1,45 @@
+::-webkit-input-placeholder { /* Edge */
+    font-family: 'NotoSans';
+    font-size: 20px;
+    color: #d1d1d1;
+    text-align: left;
+    @include media('<=lg') {
+        font-size: 14px;       
+    }
+}
+  
+:-ms-input-placeholder { /* Internet Explorer */
+    font-family: 'NotoSans';
+    font-size: 20px;
+    color: #d1d1d1;
+    text-align: left;
+    @include media('<=lg') {
+        font-size: 14px;       
+    }
+}
+  
+::placeholder {
+    font-family: 'NotoSans';
+    font-size: 20px;
+    color: #d1d1d1;
+    text-align: left;
+    @include media('<=lg') {
+        font-size: 14px;       
+    }
+}
+.btn {
+    &--search {
+        font-size: 30px;
+        font-weight: 700;
+        text-align: right;
+        color: #121212;
+        padding: 10px;
+        box-sizing: border-box;
+        @include media('>lg', '<=xl') {
+            font-size: 1.875vw;
+        }
+        @include media('<=lg') {
+            font-size: 16px;   
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.burger {
+    position: relative;
+    margin-left: 34px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 4;
+    @include media('>lg','<=xl') {
+        margin-left: 2.125vw;
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    @include media('<=lg') {
+        margin-left: 12px;       
+        &.open {
+            top: 10px;
+            right: 12px;
+        }
+    }
+    &__line {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        &:nth-child(1) {
+            top: 2px;
+            transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s,transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+            @include media('>lg','<=xl') {
+                top: 0.125vw;       
+            }
+        }
+        &:nth-child(2) {
+            width: 20px;
+            top: 10px;
+            opacity: 1;
+            @include media('>lg','<=xl') {
+                width: 1.25vw;
+                top: 0.625vw;       
+            }
+        }
+        &:last-child {
+            top: 18px;
+            transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s,transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+            @include media('>lg','<=xl') {
+                top: 1.125vw;       
+            }
+        }
+    }
+    &.open {
+        .burger__line {
+            &:nth-child(1) {
+                top: 50%;          
+                transform: rotate(45deg);
+                transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:last-child {
+                top: 50%;
+                transform: rotate(-45deg);
+                transition: bottom .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) ,transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+            }
+        }
+    } 
+}
+.header.header--active, .header.header--se, .header.header--lang {
+    .burger .burger__line {
+        background-color: #111111;
+    }
+}
